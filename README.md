@@ -76,5 +76,5 @@ NEXT_PUBLIC_RPC_URL=https://rpc.api.moonbase.moonbeam.network
 MIT License
 
 ## 👨‍💻 Team
-Built by **Dave Adams**  
+Built by **Dave Adams and Akash Sharma**  
 Submission for [Consensus Hackathon 2025]  
