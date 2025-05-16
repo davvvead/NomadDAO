@@ -22,23 +22,39 @@ Users can:
 - Deployed on **Moonbase Alpha** (Moonbeam testnet on Polkadot)
 - ERC721-compliant with `mint`, `checkIfMinted`, and `totalMinted` methods
 
-**Frontend Stack**
-- Built using **Next.js** + **TailwindCSS**
-- Contract interaction powered by **ethers.js**
-- Wallet connection via **MetaMask** on Moonbase Alpha
+## 🔧 Tech Stack
 
-**Deployment**
-- Used **Hardhat** for compiling, deploying, and testing
-- Contract verified on Sourcify:  
-  `https://repo.sourcify.dev/1287/0x74291452A977636C3965625c4462919f144Ee589`
+### **Blockchain**
+- 🪐 **Moonbase Alpha** (Moonbeam's testnet, EVM-compatible, built on Polkadot)
 
-## 🌐 Blockchain Interaction
-- NFT minting handled via `mintResidencyNFTs.js`
-- Uses `ethers.providers.Web3Provider(window.ethereum)`
-- Contract reads: `checkIfMinted`, `getTokenURI`, etc.
-- Deployed to: `Moonbase Alpha`
-- Verified and published to Sourcify
-- Public contract address: `0x74291452A977636C3965625c4462919f144Ee589`
+### **Smart Contracts**
+- 🧾 **Solidity**
+- `ResidencyNFT`: A non-transferable ERC721 contract representing membership in a city DAO
+- **Optional**: DAO contract with proposal and voting functionality
+
+### **Frontend**
+- ⚛️ **Next.js** + **TailwindCSS** + `shadcn/ui`
+- Clean, modular dashboard with minting, tracking, and future governance sections
+
+### **Wallet Integration**
+- 🔐 **MetaMask** via `ethers.js`
+- Auto-detection and switching to **Moonbase Alpha**
+- Transaction signing and on-chain interaction
+
+### **Smart Contract Interface**
+- 🔧 **ethers.js** for all contract calls
+- Includes:
+  - `mint()`
+  - `hasMinted(address)`
+  - `tokenURI(tokenId)`
+  - `totalMinted()`
+
+### **Moonbeam's Role**
+- 🌉 Full EVM compatibility within the **Polkadot ecosystem**
+- Enables:
+  - Standard Ethereum tooling (Remix, MetaMask, Hardhat)
+  - Use of **Moonscan** for block exploration
+  - Future cross-chain governance using Polkadot's XCM
 
 ## 🧪 Demo Video
 [![Watch Demo]()
