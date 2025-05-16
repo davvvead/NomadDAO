@@ -78,7 +78,7 @@ Users can:
 ## 🛠️ How to Run Locally
 
 ```bash
-git clone https://github.com/yourusername/nomad-dao.git
+git clone https://github.com/davvvead/NomadDAO.git
 cd nomad-dao
 npm install
 npm run dev
