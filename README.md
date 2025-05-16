@@ -79,7 +79,7 @@ Users can:
 
 ```bash
 git clone https://github.com/davvvead/NomadDAO.git
-cd nomad-dao
+cd NomadDAO
 npm install
 npm run dev
 ```
