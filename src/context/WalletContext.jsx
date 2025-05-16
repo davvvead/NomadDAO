@@ -2,6 +2,8 @@
 
 import { createContext, useContext, useState, useEffect } from 'react';
 import { checkConnection } from "@/utils/mintResidencyNFTs";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const WalletContext = createContext();
 
@@ -53,7 +55,17 @@ export function WalletProvider({ children }) {
   const connect = async () => {
     try {
       if (!window.ethereum) {
-        throw new Error("MetaMask is not installed. Please install MetaMask to continue.");
+        toast.error(<div>MetaMask is not installed. <span style={{ textDecoration: 'underline', color: 'blue', cursor: 'pointer' }}>Click here to download MetaMask</span>.</div>, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          onClick: () => window.open('https://metamask.io/download.html', '_blank')
+        });
+        throw new Error("MetaMask is not installed.");
       }
 
       const connection = await checkConnection();
@@ -76,6 +88,7 @@ export function WalletProvider({ children }) {
       disconnect 
     }}>
       {children}
+      <ToastContainer />
     </WalletContext.Provider>
   );
 }
