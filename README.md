@@ -57,7 +57,7 @@ Users can:
   - Future cross-chain governance using Polkadot's XCM
 
 ## 🧪 Demo Video
-[![Watch Demo]()
+[[![Watch Demo]()](https://youtu.be/pmT59dG2jFI)
 
 ## 📸 Screenshots
 ![Dashboard](https://github.com/user-attachments/assets/d0d77e44-211d-400a-8d4f-d3dc6e396fb1)
