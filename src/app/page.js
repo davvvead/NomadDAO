@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Github, FileText, MessageSquare, Twitter, ChevronRight, Wallet, Vote, Building2 } from "lucide-react"
+import { Github, FileText, MessageSquare, Twitter, ChevronRight, Wallet, Vote, Building2, Coins } from "lucide-react"
 
 export default function Home() {
 
@@ -27,17 +27,21 @@ export default function Home() {
             Community
           </Link>
         </nav>
-        <Button variant="outline" className="hidden md:flex border-green-500 text-green-400 hover:bg-green-500/10">
-          Connect Wallet
-        </Button>
-        <Button
-          variant="outline"
-          size="icon"
-          className="md:hidden border-green-500 text-green-400 hover:bg-green-500/10"
-        >
-          <ChevronRight className="h-4 w-4" />
-          <span className="sr-only">Menu</span>
-        </Button>
+        <Link href="/dashboard" className="hidden md:block">
+          <Button variant="outline" className="border-green-500 text-green-400 hover:bg-green-500/10">
+            Launch App
+          </Button>
+        </Link>
+        <Link href="/dashboard" className="md:hidden">
+          <Button
+            variant="outline"
+            size="icon"
+            className="border-green-500 text-green-400 hover:bg-green-500/10"
+          >
+            <ChevronRight className="h-4 w-4" />
+            <span className="sr-only">Launch App</span>
+          </Button>
+        </Link>
       </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
@@ -54,10 +58,16 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button className="bg-green-500 hover:bg-green-600 text-black font-bold">Mint Residency NFT</Button>
-                  <Button variant="outline" className="border-green-500 text-green-400 hover:bg-green-500/10">
-                    Learn More
-                  </Button>
+                  <Link href="/dashboard">
+                    <Button className="bg-green-500 hover:bg-green-600 text-black font-bold w-full">
+                      Mint Residency NFT
+                    </Button>
+                  </Link>
+                  <Link href="#features">
+                    <Button variant="outline" className="border-green-500 text-green-400 hover:bg-green-500/10 w-full">
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="flex items-center justify-center">
@@ -146,12 +156,12 @@ export default function Home() {
                 </div>
                 <div className="rounded-lg border border-green-500/20 bg-zinc-900 p-6 pt-8 shadow-lg">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10">
-                    <Wallet className="h-6 w-6 text-green-400" />
+                    <Building2 className="h-6 w-6 text-green-400" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold">Connect Wallet</h3>
+                    <h3 className="text-xl font-bold">Choose Your City</h3>
                     <p className="text-zinc-400">
-                      Connect your Web3 wallet to access the NomadDAO platform and verify your identity.
+                      Browse available virtual cities and find the perfect community for you.
                     </p>
                   </div>
                 </div>
@@ -162,12 +172,12 @@ export default function Home() {
                 </div>
                 <div className="rounded-lg border border-green-500/20 bg-zinc-900 p-6 pt-8 shadow-lg">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10">
-                    <Building2 className="h-6 w-6 text-green-400" />
+                    <Coins className="h-6 w-6 text-green-400" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold">Mint NFT</h3>
+                    <h3 className="text-xl font-bold">Mint Residency</h3>
                     <p className="text-zinc-400">
-                      Choose your virtual city and mint a Residency NFT to become an official citizen.
+                      Mint your Residency NFT to become an official citizen of your chosen virtual city.
                     </p>
                   </div>
                 </div>
@@ -202,10 +212,16 @@ export default function Home() {
                 </p>
               </div>
               <div className="mx-auto flex flex-col gap-2 min-[400px]:flex-row justify-center">
-                <Button className="bg-green-500 hover:bg-green-600 text-black font-bold">Mint Residency NFT</Button>
-                <Button variant="outline" className="border-green-500 text-green-400 hover:bg-green-500/10">
-                  Explore Cities
-                </Button>
+                <Link href="/dashboard">
+                  <Button className="bg-green-500 hover:bg-green-600 text-black font-bold w-full">
+                    Mint Residency NFT
+                  </Button>
+                </Link>
+                <Link href="/dashboard">
+                  <Button variant="outline" className="border-green-500 text-green-400 hover:bg-green-500/10 w-full">
+                    Explore Cities
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
