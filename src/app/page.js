@@ -53,8 +53,8 @@ export default function Home() {
                     Shape Your City in the Metaverse
                   </h1>
                   <p className="max-w-[600px] text-zinc-400 md:text-xl">
-                    Join virtual cities with Residency NFTs, vote on city upgrades through DAO proposals, and view a
-                    shared treasury. Build the digital community you've always wanted.
+                                Join virtual cities with Residency NFTs, vote on city upgrades through DAO proposals, and view a
+            shared treasury. Build the digital community you&apos;ve always wanted.
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
